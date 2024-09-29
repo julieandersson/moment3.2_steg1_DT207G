@@ -52,7 +52,7 @@ app.get("/api", async (req, res) => {
 });
 
 // Get-route - Hämtar arbetserfarenheter
-app.get("/workexperiences", async (req, res) => {
+app.get("/workexperience", async (req, res) => {
     try {
         let result = await Workexperience.find({});
 
