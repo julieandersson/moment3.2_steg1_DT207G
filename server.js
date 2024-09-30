@@ -44,7 +44,7 @@ const workExperienceSchema = new mongoose.Schema({
 });
 
 // Inkluderar schemat till databas med tabell Workexperience
-const Workexperience = mongoose.model("Workexperience", workExperienceSchema);
+const Workexperience = mongoose.model("Workexperience", workExperienceSchema, "workexperience");
 
 // Routes
 app.get("/api", async (req, res) => {
