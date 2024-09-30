@@ -1,13 +1,18 @@
+// Inkluderar express
 const express = require('express');
-const cors = require("cors");
-const mongoose = require("mongoose");
-require('dotenv').config(); // Hämtar variabler från .env
-
 const app = express();
+
+// Inkluderar mongoose
+const mongoose = require("mongoose");
+
+// Inkluderar och använder cors för att tillåta alla domäner
+const cors = require("cors");
+app.use(cors());
+
 const port = process.env.PORT || 3000;
 
-app.use(cors());
-app.use(express.json());
+require('dotenv').config(); // Hämtar variabler från .env
+app.use(express.json()); // Använder middleware för att automatiskt konvertera till json
 
 // Anslut till Mongodb
 mongoose.connect(process.env.MONGO_URI).then(() => {
