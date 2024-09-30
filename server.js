@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require("cors");
 const mongoose = require("mongoose");
+require('dotenv').config(); // Hämtar variabler från .env
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -9,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 // Anslut till Mongodb
-mongoose.connect("mongodb://localhost:27017/DT207G").then(() => {
+mongoose.connect(process.env.MONGO_URI).then(() => {
     console.log("Ansluten till MongoDB");
 }).catch((error) => {
     console.log("Fel vid anslutning av databasen: " + error);
