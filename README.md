@@ -18,7 +18,7 @@ Kör kommando npm install (förutsatt att Node.js är installerat) för att inst
 
 |Tabell-namn|Fält  |
 |--|--|
-|workexperience  | **id** (anges automatiskt), **companyname** (STRING), **jobtitle** (STRING), **location** (STRING), **startdate** (DATE), **enddate** (DATE), **description** (STRING) |
+|workexperience  | **id** (skapas automatiskt), **companyname** (STRING), **jobtitle** (STRING), **location** (STRING), **startdate** (DATE), **enddate** (DATE), **description** (STRING) |
 
 ### Funktionalitet
 Denna webbtjänst hanterar följande:
