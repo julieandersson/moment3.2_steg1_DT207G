@@ -50,5 +50,16 @@ Exempel på svar:
   }
 ```
 ### Utvecklingsmiljö:
+Verktyg och tekniker:
+- Node.js: Server-side JavaScript
+- Exrepss: Ramverk för att skapa och hantera HTTP-server och API
+- MongoDB Atlas: NoSQL-databas som används för att lagra arbetserfarenheter
+- Mongoose: ODM bibliotek för MongoDB och Node.js som används för att hantera databasscheman och operationer. 
+- Nodemon: Används under utveckling för att automatiskt starta om servern vid kodändringar.
+- dotenv: Hantering av miljövariabler, såsom databasanslutningar, via .env-fil.
+- Thunderclient/Postman: Verktyg för att testa API-anrop under utvecklingen av arbetet.
 
 ### Skapad av:
+- Julie Andersson
+- Webbutvecklingsprogrammet på Mittuniversitetet i Sundsvall
+- Moment 3.2 - steg 1 i kursen DT207G Backendbaserad Webbutveckling
