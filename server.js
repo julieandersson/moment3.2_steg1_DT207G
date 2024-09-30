@@ -102,6 +102,28 @@ app.put("/workexperience/:id", async (req, res) => {
     }
 });
 
+// DELETE-route - Tar bort en arbetserfarenhet baserat på ID
+app.delete("/workexperience/:id", async (req, res) => {
+    try {
+        // Hämtar job-ID från URL-parameter
+        const id = req.params.id;
+
+        // Försök att hitta och ta bort arbetserfarenhet med det angivna ID:t
+        let result = await Workexperience.findByIdAndDelete(id);
+
+        // Kontrollera om arbetserfarenheten med det angivna ID:t hittades och togs bort
+        if (!result) {
+            return res.status(404).json({ message: "Ingen arbetserfarenhet kunde hittas med det angivna ID:t." });
+        }
+
+        // Om borttagningen lyckas, skicka meddelande
+        return res.json({ message: "Arbetserfarenhet har tagits bort.", result });
+
+    } catch (error) {
+        return res.status(500).json({ message: "Fel vid radering", error });
+    }
+});
+
 app.listen(port, () => {
     console.log("Server startad på port: " + port);
 });
