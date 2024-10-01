@@ -6,7 +6,7 @@ Denna uppgift gick ut på att skapa en REST-webbtjänst som hanterar arbetserfar
 Applikationen är skapad med Node.js, Express och MongoDB via Mongoose för att hantera lagring av data. Applikationen har stöd för CRUD (Create, Read, Update, Delete) och möjliggör hantering av arbetserfarenheter med fält som companyname, jobtitle, location, startdate, enddate och description. 
 
 ### Länk
-Webbtjänsten är publicerat via Render: 
+Webbtjänsten är publicerat via Render: https://moment3-2-steg1-dt207g.onrender.com, https://moment3-2-steg1-dt207g.onrender.com/workexperience
 
 ### Installation, databas
 Webbtjänsten har skapats med en MongoDB Atlas-databas. Klona ner källkodsfilerna med kommandot: 
